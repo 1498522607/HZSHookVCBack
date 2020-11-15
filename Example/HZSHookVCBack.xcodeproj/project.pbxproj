@@ -22,6 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		62E23317082A5AC03D4568B2 /* Pods_HZSHookVCBack_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C74AD4FC6ADA8863BCED4D1 /* Pods_HZSHookVCBack_Example.framework */; };
+		6E734B762560D45B00A767B7 /* HZSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E734B752560D45B00A767B7 /* HZSTestViewController.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -38,9 +39,9 @@
 
 /* Begin PBXFileReference section */
 		136DC609760F4ADB8D5E96F0 /* Pods-HZSHookVCBack_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZSHookVCBack_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HZSHookVCBack_Tests/Pods-HZSHookVCBack_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		21575D9B55761223E2BA61D4 /* HZSHookVCBack.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HZSHookVCBack.podspec; path = ../HZSHookVCBack.podspec; sourceTree = "<group>"; };
+		21575D9B55761223E2BA61D4 /* HZSHookVCBack.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HZSHookVCBack.podspec; path = ../HZSHookVCBack.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4C74AD4FC6ADA8863BCED4D1 /* Pods_HZSHookVCBack_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HZSHookVCBack_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A03267B4CAB26EE88E0C5BE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5A03267B4CAB26EE88E0C5BE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HZSHookVCBack_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZSHookVCBack_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,10 +63,12 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		635C7D1B517FD3DF0A0F4A32 /* Pods-HZSHookVCBack_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZSHookVCBack_Example.debug.xcconfig"; path = "Target Support Files/Pods-HZSHookVCBack_Example/Pods-HZSHookVCBack_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6BC07A4F2F2853A061F24F59 /* Pods-HZSHookVCBack_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZSHookVCBack_Tests.release.xcconfig"; path = "Target Support Files/Pods-HZSHookVCBack_Tests/Pods-HZSHookVCBack_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6E734B742560D45B00A767B7 /* HZSTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZSTestViewController.h; sourceTree = "<group>"; };
+		6E734B752560D45B00A767B7 /* HZSTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZSTestViewController.m; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		929B6F12A29593923CBBFA1E /* Pods_HZSHookVCBack_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HZSHookVCBack_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF791BB4670E935C14336A8B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EF791BB4670E935C14336A8B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F6680434F11A6F355114AA43 /* Pods-HZSHookVCBack_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZSHookVCBack_Example.release.xcconfig"; path = "Target Support Files/Pods-HZSHookVCBack_Example/Pods-HZSHookVCBack_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +140,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* HZSViewController.h */,
 				6003F5A6195388D20070C39A /* HZSViewController.m */,
+				6E734B742560D45B00A767B7 /* HZSTestViewController.h */,
+				6E734B752560D45B00A767B7 /* HZSTestViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -193,7 +198,6 @@
 				136DC609760F4ADB8D5E96F0 /* Pods-HZSHookVCBack_Tests.debug.xcconfig */,
 				6BC07A4F2F2853A061F24F59 /* Pods-HZSHookVCBack_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +263,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -385,6 +390,7 @@
 			files = (
 				6003F59E195388D20070C39A /* HZSAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* HZSViewController.m in Sources */,
+				6E734B762560D45B00A767B7 /* HZSTestViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

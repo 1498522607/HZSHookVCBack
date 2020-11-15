@@ -1,0 +1,6 @@
+framework module HZSHookVCBack {
+  umbrella header "HZSHookVCBack-umbrella.h"
+
+  export *
+  module * { export * }
+}
