@@ -7,7 +7,33 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+导入头文件HZSHookVCBack.h
+然后实现UINavigationControllerHookBackDelegate里面的方法即可实现拦截
+```ruby
+- (BOOL)hzs_backGestureAction {
+    
+    [self showAlert];
+    return NO;
+}
+
+- (BOOL)hzs_backBarButtonItemDidClickAction {
+    
+    [self showAlert];
+    return NO;
+}
+
+- (void)showAlert {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否要退出页面" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定退出" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+```
 
 ## Requirements
 
@@ -22,7 +48,7 @@ pod 'HZSHookVCBack'
 
 ## Author
 
-1498522607@qq.com, huangzushu@ds.cn
+黄祖树, 1498522607@qq.com
 
 ## License
 
