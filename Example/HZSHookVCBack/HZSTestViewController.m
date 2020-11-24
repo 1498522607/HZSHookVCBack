@@ -20,16 +20,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+    
+//    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+//    [backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+//    [backButton addTarget:self action:@selector(backItemClick) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+//    self.navigationItem.leftBarButtonItem = backItem;
 }
 
+//- (void)backItemClick {
+//    NSLog(@"122");
+//}
+
+
 - (BOOL)hzs_backGestureAction {
-    
+    NSLog(@"点击了返回按钮");
     [self showAlert];
     return NO;
 }
 
 - (BOOL)hzs_backBarButtonItemDidClickAction {
-    
+    NSLog(@"触发了返回手势");
     [self showAlert];
     return NO;
 }

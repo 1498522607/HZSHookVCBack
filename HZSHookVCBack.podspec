@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/1498522607/HZSHookVCBack'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '黄祖树' => '1498522607@qq.com' }
+  s.author           = { '古德猫宁' => '1498522607@qq.com' }
   s.source           = { :git => 'https://github.com/1498522607/HZSHookVCBack.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

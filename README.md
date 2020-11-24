@@ -8,7 +8,7 @@
 ## Example
 
 导入头文件HZSHookVCBack.h
-然后实现UINavigationControllerHookBackDelegate里面的方法即可实现拦截
+然后在ViewController里实现UINavigationControllerHookBackDelegate里面的方法即可实现拦截
 ```ruby
 - (BOOL)hzs_backGestureAction {
     
@@ -48,7 +48,7 @@ pod 'HZSHookVCBack'
 
 ## Author
 
-黄祖树, 1498522607@qq.com
+古德猫宁, 1498522607@qq.com
 
 ## License
 

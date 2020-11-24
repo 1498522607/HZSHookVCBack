@@ -2,7 +2,7 @@
 //  UINavigationController+HZSHookVCBack.m
 //  Pods
 //
-//  Created by 黄祖树 on 2020/11/15.
+//  Created by 古德猫宁 on 2020/11/15.
 //
 
 #import "UINavigationController+HZSHookVCBack.h"
