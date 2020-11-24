@@ -20,12 +20,14 @@
         SEL swizzledSelector = @selector(hzs_pushViewController:animated:);
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        BOOL success = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
-        if (success) {
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+        
+        
+        SEL original_sel = @selector(navigationBar:shouldPopItem:);
+        SEL swizzled_sel = @selector(hzs_navigationBar:shouldPopItem:);
+        Method ori_method = class_getInstanceMethod(class, original_sel);
+        Method swi_method = class_getInstanceMethod(class, swizzled_sel);
+        method_exchangeImplementations(ori_method, swi_method);
     });
 }
 
@@ -87,7 +89,7 @@
     return YES;
 }
 
-- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
+- (BOOL)hzs_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
     /*
      这个分类是UINavigationController的分类，而不是子类的分类。
      优先级 ： 子类分类 > 子类 > 父类分类 > 父类
@@ -95,43 +97,12 @@
     if ([self.topViewController respondsToSelector:@selector(hzs_backBarButtonItemDidClickAction)]) {
         BOOL back = [self.topViewController hzs_backBarButtonItemDidClickAction];
         if (back) {
-            return [self originalNavigationBar:navigationBar shouldPopItem:item];
+            return [self hzs_navigationBar:navigationBar shouldPopItem:item];
         } else {
             return back;
         }
     }
-    return [self originalNavigationBar:navigationBar shouldPopItem:item];
-}
-
-/*
- 分类重写方法优先级高于原类。
- */
-- (BOOL)originalNavigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
-    int index = -1;
-    unsigned int outCount = 0;
-    BOOL res = NO;
-    
-    Class tempclass = [UINavigationController class];
-    Method *methods = class_copyMethodList(tempclass, &outCount);
-    for (int i = outCount; i > 0; i--) {
-        //降序查找
-        Method method = methods[i];
-        SEL methodName = method_getName(method);
-        NSString * str = NSStringFromSelector(methodName);
-        if ([str isEqualToString:@"navigationBar:shouldPopItem:"]) {
-            index = i;
-            break;
-        }
-    }
-    if (index >= 0) {
-        SEL sel = method_getName(methods[index]);
-        IMP imp = method_getImplementation(methods[index]);
-        res = ((BOOL (*)(id, SEL, UINavigationBar*, UINavigationItem*))imp)(self, sel, navigationBar, item);
-        free(methods); //记得释放
-        return res;
-    }
-    free(methods); //记得释放
-    return res;
+    return [self hzs_navigationBar:navigationBar shouldPopItem:item];
 }
 
 - (UIPanGestureRecognizer *)hzs_backGestureRecognizer {
